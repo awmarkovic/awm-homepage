@@ -3,7 +3,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow-x: hidden;
   background-color: lightgrey;
 }
 
@@ -13,16 +13,8 @@ body {
   --spacing-m: 16px;
   --spacing-l: 24px;
 
-  /* Do something like this for typography, colours, etc… */
-  /* --font-main: Comic Sans MS, cursive, sans-serif;
-  --font-accent: baskervville, serif;
-
-  --font-size-small: 12px;
-  --font-size-medium: 16px;
-  --font-size-large: 24px;
-
-  --color--primary: #ff6f61;
-  --color-secondary: #6b5b95; */
+  --font-title: Baskervville, serif;
+  --font-text: arial, helvetica, sans-serif;
 }
 
 .page-layout {
@@ -35,7 +27,8 @@ body {
   padding: var(--spacing-m);
   /* border: 2px solid green; */
   aspect-ratio: 1 / 2;
-  margin: 10px;
+  margin: 12px;
+  /* line-height: 1.5; */
 }
 
 .header {
@@ -60,17 +53,14 @@ body {
 .name-label {
   font-size: 24px;
   font-weight: bold;
-  font-family: baskervville, serif;
+  font-family: var(--font-title);
+  letter-spacing: 4px;
 }
 
 .header-text {
   font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-text);
   text-align: center;
-}
-
-.header-text p {
-  margin: 0;
 }
 
 .divider {
@@ -78,15 +68,19 @@ body {
   grid-column: 2 / span 1;
   grid-row: 2 / span 1;
 }
-.left,
+
+/* .left,
 .right {
   grid-row: 2 / span 1;
-}
+  align-self: center;
+} */
+
 .left {
   grid-column: 1 / span 1;
   /* border: 2px solid green; */
   text-align: end;
 }
+
 .right {
   grid-column: 3 / span 1;
   /* border: 2px solid green; */
@@ -96,26 +90,31 @@ body {
 .footer {
   /* border: 2px solid green; */
   grid-column: 1 / -1;
-  grid-row: 3 / -1;
+  /* grid-row: 3 / -1; */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: var(--spacing-m);
 }
+
 .footer .titles {
   margin: 0;
 }
 
 .titles {
   font-weight: bold;
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-family: var(--font-title);
   margin-bottom: var(--spacing-s);
 }
 
-.link:hover {
+.link {
   text-decoration: underline;
+}
+
+.link:hover {
+  font-weight: bold;
 }
 
 .link-list {
@@ -127,7 +126,7 @@ body {
 .link-list li {
   margin-bottom: var(--spacing-m);
   font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-text);
   text-align: center;
 }
 
@@ -143,4 +142,40 @@ strong {
 #root {
   width: 100%;
   height: 100%;
+}
+
+/*Mobile*/
+@media (max-width: 600px) {
+  .page-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    aspect-ratio: auto;
+    gap: var(--spacing-m);
+  }
+  .divider {
+    display: none;
+  }
+  .left,
+  .right {
+    grid-column: 1 / span 1;
+    text-align: center;
+  }
+}
+
+/*Tablet*/
+@media (min-width: 601px) and (max-width: 1024px) {
+  .page-layout {
+    grid-template-columns: 1fr 2px 1fr;
+    grid-template-rows: auto auto auto;
+    gap: var(--spacing-l);
+  }
+}
+
+/*Desktop*/
+@media (min-width: 1025px) {
+  .page-layout {
+    grid-template-columns: 1fr 2px 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: var(--spacing-l);
+  }
 }

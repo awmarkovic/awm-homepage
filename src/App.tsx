@@ -73,6 +73,13 @@ function App() {
             <p>McDonalds Trondheim Torg, QSC Restauranter AS</p>
           </li>
         </ul>
+        <br />
+        <br />
+        <h2 className="titles">Teknologier</h2>
+        <p className="experience-list">
+          HTML, CSS, TypeScript/JavaScript, Java, C#, Python, Kotlin,C i Linux,
+          Swift, Vite, React, Tailwind, MySQL,
+        </p>
       </div>
       <div className="right">
         <h2 className="titles">Utdanning</h2>
