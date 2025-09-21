@@ -147,6 +147,14 @@ strong {
     gap: var(--spacing-m);
   }
 
+  .header {
+    margin-bottom: var(--spacing-m);
+  }
+
+  .footer {
+    margin-top: var(--spacing-m);
+  }
+
   .divider {
     display: none;
   }
