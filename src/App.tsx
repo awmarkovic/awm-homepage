@@ -6,7 +6,12 @@ function App() {
     <div className="page-layout">
       {/* Header of the page */}
       <header className="header">
-        <img className="avatar" src="/avatar.jpeg" alt="Picture of Amanda" />
+        <img
+          className="avatar"
+          src="/awm-homepage/avatar.jpeg"
+          alt="Picture of Amanda"
+        />
+
         <div className="header-text">
           <h1 className="name-label">Amanda Woldseth Markovic</h1>
 
