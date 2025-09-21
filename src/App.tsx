@@ -78,7 +78,7 @@ function App() {
         <h2 className="titles">Teknologier</h2>
         <p className="experience-list">
           HTML, CSS, TypeScript/JavaScript, Java, C#, Python, Kotlin, <br />C i
-          Linux, Swift, Vite, React, Tailwind, MySQL, Github Actions
+          Linux, Swift, Vite, React, Tailwind, MySQL, Git, GitHub Actions
         </p>
       </div>
       <div className="right">
