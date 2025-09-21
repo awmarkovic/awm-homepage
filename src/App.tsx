@@ -8,7 +8,7 @@ function App() {
       <header className="header">
         <img
           className="avatar"
-          src="/awm-homepage/avatar.jpeg"
+          src={`${import.meta.env.BASE_URL}avatar.jpeg`}
           alt="Picture of Amanda"
         />
 
