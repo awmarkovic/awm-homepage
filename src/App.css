@@ -24,11 +24,11 @@ body {
   gap: var(--spacing-l);
   width: 100%;
   height: 100%;
-  padding: var(--spacing-m);
+  padding: var(--spacing-s);
   /* border: 2px solid green; */
   aspect-ratio: 1 / 2;
-  margin: 12px;
-  /* line-height: 1.5; */
+  margin: var(--spacing-xs);
+  line-height: 1.5;
 }
 
 .header {
@@ -40,12 +40,11 @@ body {
   align-items: center;
   flex-direction: column;
   gap: var(--spacing-m);
-  padding-bottom: var(--spacing-m);
 }
 
 .avatar {
-  width: 140px;
-  height: 140px;
+  width: 160px;
+  height: 160px;
   border-radius: 100%;
   object-fit: cover;
 }
@@ -95,11 +94,6 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: var(--spacing-m);
-}
-
-.footer .titles {
-  margin: 0;
 }
 
 .titles {
@@ -152,9 +146,11 @@ strong {
     aspect-ratio: auto;
     gap: var(--spacing-m);
   }
+
   .divider {
     display: none;
   }
+
   .left,
   .right {
     grid-column: 1 / span 1;
@@ -177,5 +173,6 @@ strong {
     grid-template-columns: 1fr 2px 1fr;
     grid-template-rows: auto 1fr auto;
     gap: var(--spacing-l);
+    line-height: 1.3;
   }
 }

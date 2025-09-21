@@ -75,7 +75,6 @@ function App() {
           </li>
         </ul>
         <br />
-        <br />
         <h2 className="titles">Teknologier</h2>
         <p className="experience-list">
           HTML, CSS, TypeScript/JavaScript, Java, C#, Python, <br />
@@ -102,7 +101,6 @@ function App() {
             <p>Byåsen Videregående, Trondheim</p>
           </li>
         </ul>
-        <br />
         <br />
         <h2 className="titles">Verv</h2>
         <ul className="experience-list">
