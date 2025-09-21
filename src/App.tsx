@@ -59,14 +59,6 @@ function App() {
           <br />
           <li>
             <p>
-              <strong>Januar 2018 – april 2018</strong>
-            </p>
-            <p>Servitør</p>
-            <p>Kompis Byåsen</p>
-          </li>
-          <br />
-          <li>
-            <p>
               <strong>Mars 2016 - januar 2018</strong>
             </p>
             <p>Skiftleder (mai 2017 – jan 2018)</p>
