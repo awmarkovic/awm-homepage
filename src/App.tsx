@@ -69,8 +69,10 @@ function App() {
         <br />
         <h2 className="titles">Teknologier</h2>
         <p className="experience-list">
-          HTML, CSS, TypeScript/JavaScript, Java, C#, Python, Kotlin, <br />C i
-          Linux, Swift, Vite, React, Tailwind, MySQL, Git, GitHub Actions
+          HTML, CSS, TypeScript/JavaScript, Java, C#, .NET, Python, Kotlin,{" "}
+          <br />
+          C i Linux, Swift, Vite, React, React Native, Expo, <br />
+          Tailwind, MySQL, Git, GitHub Actions
         </p>
       </div>
       <div className="right">
@@ -98,10 +100,10 @@ function App() {
         <ul className="experience-list">
           <li>
             <p>
-              <strong>August 2025 – desember 2025</strong>
+              <strong>August 2025 – juni 2026</strong>
             </p>
-            <p>BouMentor</p>
-            <p>Mentorprogram hos Bouvet avd. Oslo</p>
+            <p>Varatillitsvalgt - Frontend og mobilutvikling</p>
+            <p>Høyskolen Kristiania, Oslo</p>
           </li>
           <br />
           <li>
