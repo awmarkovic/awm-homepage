@@ -2,6 +2,7 @@ import "./reset.css";
 import "./App.css";
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import ActionButton from "./ui/ActionButton";
 import {
   FiCalendar,
   FiMoon,
@@ -160,16 +161,15 @@ function App() {
     }, 0);
   };
 
-  const handleLocaleToggle = () => {
+      const handleLocaleToggle = () => {
     void i18n.changeLanguage(locale === "no" ? "en" : "no");
   };
 
   return (
     <main className="resume-page" data-theme={theme}>
       <div className="resume-actions">
-        <button
+        <ActionButton
           className="locale-switch"
-          type="button"
           onClick={handleLocaleToggle}
           aria-label={locale === "no" ? "Switch to English" : "Bytt til norsk"}
         >
@@ -188,10 +188,9 @@ function App() {
             <FlagIcon country="en" />
             <span className="locale-label">EN</span>
           </span>
-        </button>
-        <button
+        </ActionButton>
+        <ActionButton
           className="theme-button"
-          type="button"
           onClick={() =>
             setTheme((currentTheme) =>
               currentTheme === "light" ? "dark" : "light",
@@ -204,11 +203,11 @@ function App() {
               ? t("themeLabel.dark")
               : t("themeLabel.light")}
           </span>
-        </button>
-        <button className="print-button" type="button" onClick={handlePrint}>
+        </ActionButton>
+        <ActionButton className="print-button" onClick={handlePrint}>
           <FiPrinter aria-hidden="true" />
           <span>{t("printLabel")}</span>
-        </button>
+        </ActionButton>
       </div>
       <section className="resume-card">
         <header className="hero">

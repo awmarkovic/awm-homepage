@@ -56,8 +56,9 @@ a {
 .locale-switch {
   display: inline-flex;
   align-items: center;
+  flex: 0 0 auto;
   gap: 10px;
-  padding: 10px 14px;
+  padding: 12px 18px;
   border: 1px solid rgba(139, 107, 76, 0.2);
   border-radius: 999px;
   background: rgba(250, 248, 243, 0.92);
@@ -104,6 +105,7 @@ a {
 .print-button {
   display: inline-flex;
   align-items: center;
+  flex: 0 0 auto;
   gap: 10px;
   padding: 12px 18px;
   border: 1px solid rgba(139, 107, 76, 0.2);
@@ -115,6 +117,12 @@ a {
     transform 120ms ease,
     box-shadow 120ms ease,
     background-color 120ms ease;
+}
+
+.locale-switch,
+.theme-button,
+.print-button {
+  white-space: nowrap;
 }
 
 [data-theme="dark"] .theme-button,
@@ -365,18 +373,20 @@ grid-column: 1 / -1;
 
   .resume-actions {
     margin-bottom: 14px;
-    justify-content: stretch;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 4px;
+    scrollbar-width: thin;
   }
 
   .theme-button,
   .print-button {
     justify-content: center;
-    flex: 1;
   }
 
   .locale-switch {
     justify-content: center;
-    width: 100%;
   }
 
   .resume-card {
