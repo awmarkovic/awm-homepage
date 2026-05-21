@@ -1,5 +1,14 @@
 import "./reset.css";
 import "./App.css";
+import {
+  FiCalendar,
+  FiGithub,
+  FiLinkedin,
+  FiMail,
+  FiMapPin,
+  FiPhone,
+  FiMonitor,
+} from "react-icons/fi";
 
 const workExperience = [
   {
@@ -29,6 +38,17 @@ const workExperience = [
   },
 ];
 
+const projects = [
+  {
+    period: "Januar 2026 - nå",
+    title: "Bacheloroppgave hos Function AS",
+    place: "Nyutvikling av eksisterende applikasjon i React Native",
+    details: [
+      "Samarbeidet tett på bedriften for å utvikle en ny hi-fi prototype fra bunnen av i React Native, med fokus på bedre brukeropplevelse for fjernstyring av oppvarming i boliger.",
+    ],
+  },
+];
+
 const education = [
   {
     period: "2023 - nå",
@@ -44,7 +64,7 @@ const education = [
 
 const roles = [
   {
-    period: "August 2025 - juni 2026",
+    period: "August 2025 - nå",
     title: "Varatillitsvalgt",
     place: "Frontend og mobilutvikling, Høyskolen Kristiania",
   },
@@ -65,37 +85,51 @@ const technologies = [
   "HTML",
   "CSS",
   "TypeScript",
-  "JavaScript",
   "React",
   "Vite",
   "React Native",
   "Expo",
-  ".NET",
+  "Swift",
+  ".NET/C#",
+  "Java",
   "Python",
   "Kotlin",
+  "C (Linux)",
   "MySQL",
   "Git",
-  "GitHub Actions",
+  "Figma",
+  "Prosjektstyring",
 ];
 
 type ContactItemProps = {
   href?: string;
   icon: React.ReactNode;
+  printOnly?: boolean;
+  printText?: string;
   text: string;
 };
 
-function ContactItem({ href, icon, text }: ContactItemProps) {
+function ContactItem({
+  href,
+  icon,
+  printOnly,
+  printText,
+  text,
+}: ContactItemProps) {
   const content = (
     <>
       <span className="contact-icon" aria-hidden="true">
         {icon}
       </span>
-      <span>{text}</span>
+      <span className="contact-text">
+        <span className="screen-only">{text}</span>
+        <span className="print-only">{printText ?? text}</span>
+      </span>
     </>
   );
 
   return (
-    <li className="contact-item">
+    <li className={`contact-item${printOnly ? " contact-item-print-only" : ""}`}>
       {href ? (
         <a className="contact-link" href={href}>
           {content}
@@ -124,57 +158,58 @@ function App() {
               <p className="eyebrow">Nyutdannet programvareutvikler</p>
             </div>
             <section className="content-section side-section about-me">
-              <h2 className="section-title">Om meg</h2>
+              {/* <h2 className="section-title">Om meg</h2> */}
               <p className="body-text">
-                Jeg studerer frontend og mobilutvikling og liker å kombinere
-                struktur, estetikk og tydelig kommunikasjon. Erfaringen min fra
-                butikk, teamansvar og frivillig arbeid har gitt meg et sterkt
-                fokus på mennesker, samarbeid og gjennomføring.
+                Jeg fullfører våren 2026 en bachelor i frontend og
+                mobilutvikling. Etter mange givende år i servicebransjen er jeg
+                nå klar for å ta steget inn i teknologiens verden. Jeg trives
+                spesielt godt med både React og React Native til å lage
+                interaktive løsninger, samt bruke Java, C# eller andre
+                backend-teknologier for å blåse liv i de. I tillegg synes jeg
+                det er spennende å følge utviklingen av KI og er nygjerrig på
+                hvordan det kan være med på å forme utviklerjobben. Gjennom
+                studier, bachelorprosjekt og arbeidserfaring har jeg utviklet et
+                sterkt fokus på samarbeid, struktur og gode brukeropplevelser.
               </p>
             </section>
           </div>
 
           <aside className="contact-panel">
-            <h2 className="panel-title">Kontakt</h2>
+            {/* <h2 className="panel-title">Kontakt</h2> */}
             <ul className="contact-list">
-              <ContactItem
-                text="17. desember 1996"
-                icon={
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-                    <line x1="16" y1="2" x2="16" y2="6" />
-                    <line x1="8" y1="2" x2="8" y2="6" />
-                    <line x1="3" y1="10" x2="21" y2="10" />
-                  </svg>
-                }
-              />
+              <ContactItem text="17. desember 1996" icon={<FiCalendar />} />
               <ContactItem
                 text="Mylskerudveien 37, 1152 Oslo"
-                icon={
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0Z" />
-                    <circle cx="12" cy="10" r="3" />
-                  </svg>
-                }
+                icon={<FiMapPin />}
               />
               <ContactItem
                 href="mailto:awmarkovic@gmail.com"
                 text="awmarkovic@gmail.com"
-                icon={
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <rect x="3" y="5" width="18" height="14" rx="2" />
-                    <path d="m3 7 9 6 9-6" />
-                  </svg>
-                }
+                icon={<FiMail />}
               />
               <ContactItem
                 href="tel:+4747668445"
                 text="+47 476 68 445"
-                icon={
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                  </svg>
-                }
+                icon={<FiPhone />}
+              />
+              <ContactItem
+                href="https://www.linkedin.com/in/amanda-woldseth-markovic-542226292/"
+                printText="linkedin.com/in/amanda-woldseth-markovic-542226292"
+                text="LinkedIn"
+                icon={<FiLinkedin />}
+              />
+              <ContactItem
+                href="https://github.com/awmarkovic"
+                printText="github.com/awmarkovic"
+                text="GitHub"
+                icon={<FiGithub />}
+              />
+              <ContactItem
+                href="https://awmarkovic.github.io/awm-homepage/"
+                printOnly
+                printText="awmarkovic.github.io/awm-homepage/"
+                text="Digital CV"
+                icon={<FiMonitor />}
               />
             </ul>
           </aside>
@@ -186,6 +221,27 @@ function App() {
               <h2 className="section-title">Arbeidserfaring</h2>
               <div className="entry-list">
                 {workExperience.map((item) => (
+                  <article
+                    className="entry"
+                    key={`${item.period}-${item.title}`}
+                  >
+                    <p className="entry-period">{item.period}</p>
+                    <h3 className="entry-title">{item.title}</h3>
+                    <p className="entry-place">{item.place}</p>
+                    {item.details?.map((detail) => (
+                      <p className="entry-detail" key={detail}>
+                        {detail}
+                      </p>
+                    ))}
+                  </article>
+                ))}
+              </div>
+            </section>
+
+            <section className="content-section">
+              <h2 className="section-title">Prosjekter</h2>
+              <div className="entry-list">
+                {projects.map((item) => (
                   <article
                     className="entry"
                     key={`${item.period}-${item.title}`}
@@ -244,27 +300,6 @@ function App() {
                   </article>
                 ))}
               </div>
-            </section>
-
-            <section className="content-section side-section">
-              <h2 className="section-title">Lenker</h2>
-              <ul className="link-list">
-                <li>
-                  <span>LinkedIn</span>
-                  <a
-                    className="link"
-                    href="https://www.linkedin.com/in/amanda-markovic-542226292/"
-                  >
-                    linkedin.com/in/amanda-markovic-542226292
-                  </a>
-                </li>
-                <li>
-                  <span>GitHub</span>
-                  <a className="link" href="https://github.com/awmarkovic">
-                    github.com/awmarkovic
-                  </a>
-                </li>
-              </ul>
             </section>
           </aside>
         </div>

@@ -77,7 +77,7 @@ a {
 }
 
 .eyebrow {
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .name-label {
@@ -92,8 +92,7 @@ a {
 .body-text,
 .contact-list,
 .entry,
-.tag-list,
-.link-list {
+.tag-list {
   font-size: 0.98rem;
   line-height: 1.75;
 }
@@ -126,6 +125,10 @@ a {
   min-width: 0;
 }
 
+.contact-item-print-only {
+  display: none;
+}
+
 .contact-link {
   display: grid;
   grid-template-columns: 40px minmax(0, 1fr);
@@ -156,6 +159,14 @@ a {
 .contact-link span:last-child {
   min-width: 0;
   overflow-wrap: anywhere;
+}
+
+.screen-only {
+  display: inline;
+}
+
+.print-only {
+  display: none;
 }
 
 .content-grid {
@@ -233,19 +244,6 @@ grid-column: 1 / -1;
   line-height: 1.35;
 }
 
-.link-list {
-  display: grid;
-  gap: 14px;
-}
-
-.link-list li {
-  display: grid;
-}
-
-.link-list span {
-  font-weight: 600;
-}
-
 .link {
   text-decoration: underline;
   text-decoration-thickness: 1px;
@@ -289,5 +287,154 @@ grid-column: 1 / -1;
 
   .name-label {
     max-width: none;
+  }
+}
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 8mm;
+  }
+
+  html,
+  body,
+  #root {
+    min-height: auto;
+    height: auto;
+  }
+
+  body {
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .resume-page {
+    min-height: auto;
+    padding: 0;
+  }
+
+  .resume-card {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .hero {
+    grid-template-columns: minmax(0, 1.9fr) minmax(0, 0.95fr);
+    gap: 7mm;
+    padding-bottom: 5mm;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .hero-main {
+    grid-template-columns: 30mm minmax(0, 1fr);
+    align-items: start;
+    gap: 6mm;
+  }
+
+  .avatar {
+    width: 30mm;
+    height: 30mm;
+  }
+
+  .content-grid {
+    grid-template-columns: minmax(0, 1.9fr) minmax(0, 0.95fr);
+    gap: 7mm;
+  }
+
+  .contact-panel,
+  .side-column {
+    padding-left: 5mm;
+    border-left: 1px solid var(--line);
+  }
+
+  .main-column,
+  .side-column {
+    padding-top: 5mm;
+  }
+
+  .name-label {
+    font-size: 28pt;
+    max-width: none;
+  }
+
+  .eyebrow {
+    font-size: 9pt;
+  }
+
+  .section-title,
+  .panel-title,
+  .entry-period {
+    font-size: 8pt;
+    margin-bottom: 3mm;
+  }
+
+  .body-text,
+  .contact-list,
+  .entry,
+  .tag-list {
+    font-size: 8.8pt;
+    line-height: 1.4;
+  }
+
+  .entry-title {
+    font-size: 9.8pt;
+  }
+
+  .contact-list,
+  .entry-list,
+  .entry-list.compact {
+    gap: 3.2mm;
+  }
+
+  .content-section + .content-section {
+    margin-top: 6mm;
+  }
+
+  .tag-list {
+    gap: 2mm;
+  }
+
+  .tag-list li {
+    padding: 1.2mm 2.4mm;
+    line-height: 1.15;
+  }
+
+  .contact-link {
+    grid-template-columns: 9mm minmax(0, 1fr);
+    gap: 3mm;
+  }
+
+  .contact-icon {
+    width: 9mm;
+    height: 9mm;
+  }
+
+  .contact-icon svg {
+    width: 4mm;
+    height: 4mm;
+  }
+
+  .content-section,
+  .entry,
+  .contact-item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .screen-only {
+    display: none;
+  }
+
+  .print-only {
+    display: inline;
+  }
+
+  .contact-item-print-only {
+    display: block;
   }
 }
