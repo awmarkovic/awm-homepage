@@ -133,6 +133,7 @@ a {
   color: var(--text);
 }
 
+.locale-switch:hover,
 .theme-button:hover,
 .print-button:hover {
   transform: translateY(-1px);
