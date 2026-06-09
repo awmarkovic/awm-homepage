@@ -11,7 +11,7 @@ const resources = {
       printLabel: "Print/Lagre PDF",
       roleLabel: "Nyutdannet programvareutvikler",
       about:
-        "Jeg fullfører våren 2026 en bachelor i frontend og mobilutvikling. Etter mange givende år i servicebransjen er jeg nå klar for å ta steget inn i teknologiens verden. Jeg trives spesielt godt med både React og React Native til å lage interaktive løsninger, samt bruke Java, C# eller andre backend-teknologier for å blåse liv i de. I tillegg synes jeg det er spennende å følge utviklingen av KI og er nysgjerrig på hvordan det kan være med på å forme utviklerjobben. Gjennom studier, bachelorprosjekt og arbeidserfaring har jeg utviklet et sterkt fokus på samarbeid, struktur og gode brukeropplevelser.",
+        "Våren 2026 fullførte jeg en bachelor i frontend og mobilutvikling. Etter mange givende år i servicebransjen er jeg nå klar for å ta steget inn i teknologiens verden. Jeg trives spesielt godt med både React og React Native til å lage interaktive løsninger, samt bruke Java, C# eller andre backend-teknologier for å blåse liv i de. I tillegg synes jeg det er spennende å følge utviklingen av KI og er nysgjerrig på hvordan det kan være med på å forme utviklerjobben. Gjennom studier, bachelorprosjekt og arbeidserfaring har jeg utviklet et sterkt fokus på samarbeid, struktur og gode brukeropplevelser.",
       sections: {
         work: "Arbeidserfaring",
         projects: "Prosjekter",
@@ -58,7 +58,7 @@ const resources = {
       ],
       education: [
         {
-          period: "2023 - nå",
+          period: "August 2023 - juni 2026",
           title: "Bachelor i informasjonsteknologi",
           place: "Frontend og mobilutvikling, Høyskolen Kristiania",
         },
@@ -70,7 +70,7 @@ const resources = {
       ],
       roles: [
         {
-          period: "August 2025 - nå",
+          period: "August 2025 - juni 2026",
           title: "Varatillitsvalgt",
           place: "Frontend og mobilutvikling, Høyskolen Kristiania",
         },
@@ -117,7 +117,7 @@ const resources = {
       printLabel: "Print/Save PDF",
       roleLabel: "Software Developer Graduate",
       about:
-        "I am completing a bachelor's degree in frontend and mobile development in the spring of 2026. After many rewarding years in the service industry, I am now ready to take the next step into software development. I especially enjoy building interactive solutions with both React and React Native, and using Java, C# and other backend technologies to bring them to life. I am also curious about AI and how it can help shape the developer role. Through my studies, bachelor project and work experience, I have developed a strong focus on collaboration, structure and great user experiences.",
+        "In the spring of 2026, I completed a bachelor's degree in frontend and mobile development. After many rewarding years in the service industry, I am now ready to take the next step into software development. I especially enjoy building interactive solutions with both React and React Native, and using Java, C# and other backend technologies to bring them to life. I am also curious about AI and how it can help shape the developer role. Through my studies, bachelor project and work experience, I have developed a strong focus on collaboration, structure and great user experiences.",
       sections: {
         work: "Work Experience",
         projects: "Projects",
@@ -154,7 +154,7 @@ const resources = {
       ],
       projects: [
         {
-          period: "January 2026 - present",
+          period: "January 2026 - June 2026",
           title: "Bachelor Project with Function AS",
           place: "Redevelopment of an existing application in React Native",
           details: [
@@ -164,7 +164,7 @@ const resources = {
       ],
       education: [
         {
-          period: "2023 - present",
+          period: "August 2023 - June 2026",
           title: "Bachelor's Degree in Information Technology",
           place:
             "Frontend and Mobile Development, Kristiania University College",
@@ -177,7 +177,7 @@ const resources = {
       ],
       roles: [
         {
-          period: "August 2025 - present",
+          period: "August 2025 - June 2026",
           title: "Vice Class Representative",
           place:
             "Frontend and Mobile Development, Kristiania University College",
