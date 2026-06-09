@@ -11,7 +11,7 @@ const resources = {
       printLabel: "Print/Lagre PDF",
       roleLabel: "Nyutdannet programvareutvikler",
       about:
-        "Jeg fullfører våren 2026 en bachelor i frontend og mobilutvikling. Etter mange givende år i servicebransjen er jeg nå klar for å ta steget inn i teknologiens verden. Jeg trives spesielt godt med både React og React Native til å lage interaktive løsninger, samt bruke Java, C# eller andre backend-teknologier for å blåse liv i de. I tillegg synes jeg det er spennende å følge utviklingen av KI og er nygjerrig på hvordan det kan være med på å forme utviklerjobben. Gjennom studier, bachelorprosjekt og arbeidserfaring har jeg utviklet et sterkt fokus på samarbeid, struktur og gode brukeropplevelser.",
+        "Jeg fullfører våren 2026 en bachelor i frontend og mobilutvikling. Etter mange givende år i servicebransjen er jeg nå klar for å ta steget inn i teknologiens verden. Jeg trives spesielt godt med både React og React Native til å lage interaktive løsninger, samt bruke Java, C# eller andre backend-teknologier for å blåse liv i de. I tillegg synes jeg det er spennende å følge utviklingen av KI og er nysgjerrig på hvordan det kan være med på å forme utviklerjobben. Gjennom studier, bachelorprosjekt og arbeidserfaring har jeg utviklet et sterkt fokus på samarbeid, struktur og gode brukeropplevelser.",
       sections: {
         work: "Arbeidserfaring",
         projects: "Prosjekter",
@@ -48,7 +48,7 @@ const resources = {
       ],
       projects: [
         {
-          period: "Januar 2026 - nå",
+          period: "Januar 2026 - juni 2026",
           title: "Bacheloroppgave hos Function AS",
           place: "Nyutvikling av eksisterende applikasjon i React Native",
           details: [
@@ -166,7 +166,8 @@ const resources = {
         {
           period: "2023 - present",
           title: "Bachelor's Degree in Information Technology",
-          place: "Frontend and Mobile Development, Kristiania University College",
+          place:
+            "Frontend and Mobile Development, Kristiania University College",
         },
         {
           period: "2012 - 2015",
@@ -178,12 +179,14 @@ const resources = {
         {
           period: "August 2025 - present",
           title: "Vice Class Representative",
-          place: "Frontend and Mobile Development, Kristiania University College",
+          place:
+            "Frontend and Mobile Development, Kristiania University College",
         },
         {
           period: "August 2023 - June 2024",
           title: "Class Representative",
-          place: "Frontend and Mobile Development, Kristiania University College",
+          place:
+            "Frontend and Mobile Development, Kristiania University College",
         },
         {
           period: "April 2018 - May 2023",
