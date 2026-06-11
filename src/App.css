@@ -28,7 +28,11 @@ body,
 
 body {
   margin: 0;
-  background: linear-gradient(180deg, var(--page-bg-top) 0%, var(--page-bg) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--page-bg-top) 0%,
+    var(--page-bg) 100%
+  );
   color: var(--text);
   font-family: var(--font-body);
 }
@@ -40,7 +44,11 @@ a {
 .resume-page {
   min-height: 100vh;
   padding: 32px;
-  background: linear-gradient(180deg, var(--page-bg-top) 0%, var(--page-bg) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--page-bg-top) 0%,
+    var(--page-bg) 100%
+  );
   color: var(--text);
 }
 
@@ -231,6 +239,7 @@ a {
 .panel-title {
   font-size: 0.95rem;
   margin-bottom: 16px;
+  font-weight: 700;
 }
 
 .contact-list {
@@ -303,7 +312,7 @@ a {
 }
 
 .about-me {
-grid-column: 1 / -1;
+  grid-column: 1 / -1;
 }
 
 .content-section + .content-section {
@@ -313,6 +322,7 @@ grid-column: 1 / -1;
 .section-title {
   font-size: 0.95rem;
   margin-bottom: 20px;
+  font-weight: 700;
 }
 
 .entry-list {
